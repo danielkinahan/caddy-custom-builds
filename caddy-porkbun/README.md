@@ -1,12 +1,5 @@
 # Caddy Docker build with Porkbun DNS
 
-[![Docker Hub](https://img.shields.io/badge/Docker%20Hub%20-%20danielkinahan%2Fcaddy--porkbun%20-%20%230db7ed?style=flat&logo=docker)](https://hub.docker.com/r/danielkinahan/caddy-porkbun)
-[![GitHub](https://img.shields.io/badge/GitHub%20-%20danielkinahan%2Fcaddy--porkbun%20-%20%23333?style=flat&logo=github)](https://ghcr.io/danielkinahan/caddy-porkbun)
-[![Quay](https://img.shields.io/badge/Quay%20-%20danielkinahan%2Fcaddy--porkbun%20-%20%23CC0000?style=flat&logo=redhat)](https://quay.io/danielkinahan/caddy-porkbun)
-
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/danielkinahan/caddy-custom-builds?label=Release)](https://github.com/danielkinahan/caddy-custom-builds/releases)
-[![GitHub build status](https://img.shields.io/github/actions/workflow/status/danielkinahan/caddy-custom-builds/build.caddy-porkbun.yml?label=Build)](https://github.com/danielkinahan/caddy-custom-builds/actions/workflows/build.caddy-porkbun.yml)
-
 This image is updated automatically by GitHub Actions when a new version of [Caddy](https://github.com/caddyserver/caddy) is released using the official [Caddy Docker](https://hub.docker.com/_/caddy) image and the following modules:
 - [**Porkbun DNS**](https://github.com/danielkinahan/caddy-custom-builds?tab=readme-ov-file#dns-modules): for Porkbun DNS-01 ACME validation support | [caddy-dns/porkbun](https://github.com/caddy-dns/porkbun)
 

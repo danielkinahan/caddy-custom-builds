@@ -15,7 +15,7 @@ on:
 env:
   DOCKER_BUILDKIT: 1
   DOCKER_NAME: caddy-porkbun
-  DOCKER_DESCRIPTION: "Caddy Docker custom build with Porkbun DNS and Docker Proxy modules"
+  DOCKER_DESCRIPTION: "Caddy Docker custom build with Porkbun DNS"
 
 # Jobs to run once the workflow is triggered
 jobs:
