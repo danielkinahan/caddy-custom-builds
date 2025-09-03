@@ -16,6 +16,7 @@ env:
   DOCKER_BUILDKIT: 1
   DOCKER_NAME: caddy-porkbun
   DOCKER_DESCRIPTION: "Caddy Docker custom build with Porkbun DNS"
+  CADDY_VERSION: 2
 
 # Jobs to run once the workflow is triggered
 jobs:
@@ -38,7 +39,12 @@ jobs:
 
       - name: Parse Caddy version
         id: version
-        run: echo "version=$(grep -Eo 'caddy:[0-9]+\.[0-9]+\.[0-9]+$' $DOCKER_NAME/Dockerfile | cut -d ':' -f2)" | tee -a $GITHUB_OUTPUT
+        run: |
+          docker pull caddy:${{ env.CADDY_VERSION }}
+          # Remove 'v' prefix if present
+          ver=$(docker inspect caddy:2 --format '{{ index .Config.Labels "org.opencontainers.image.version"}}')
+          ver="${ver#v}"
+          echo "version=$ver" >> $GITHUB_OUTPUT
 
       - name: Generate image metadata with Caddy version
         uses: docker/metadata-action@v5
